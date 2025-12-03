@@ -1,129 +1,108 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/*
+:root {
+    /* Définition des couleurs 
+    --couleur-primaire: #0077b6; 
+    --couleur-secondaire: #495057; 
+    --couleur-texte: #333333;
+    --couleur-fond-cv: #ffffff; 
+    --couleur-fond-page: #f4f4f9; 
 }
-
-
+/*
 body {
-    background-color: #eef2f5;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--couleur-fond-page);
+    color: var(--couleur-texte);
 }
 
 .cv-container {
-    background-color: #ffffff;
-    max-width: 750px;
-    width: 100%;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    /* Conteneur principal centré 
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--couleur-fond-cv);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 
+/*
 #titre {
     text-align: center;
-    margin-bottom: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--couleur-primaire);
 }
 
 #titre h1 {
-    font-size: 32px;
-    color: #2c3e50;
-    margin-bottom: 5px;
+    font-size: 2.2em;
+    margin: 0 0 5px;
+    color: var(--couleur-primaire);
+    text-transform: uppercase;
 }
 
 #titre h2 {
-    font-size: 18px;
-    color: #7f8c8d;
-    font-weight: 500;
+    font-size: 1.1em;
+    color: var(--couleur-texte);
+    margin: 0;
+    font-weight: normal;
 }
 
-
-#description {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 15px;
-    color: #555;
-}
 
 
 section {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 section h3 {
-    font-size: 20px;
-    color: #3498db;
+    font-size: 1.5em;
+    /* La variable --couleur-secondaire est maintenant définie 
+    color: var(--couleur-secondaire); 
+    border-left: 5px solid var(--couleur-primaire);
+    padding-left: 10px;
+    margin-top: 0;
     margin-bottom: 15px;
-    border-bottom: 2px solid #3498db;
-    display: inline-block;
-    padding-bottom: 3px;
+    text-transform: capitalize;
 }
 
+
+
+/* Supprimer les puces par défaut */
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
+/* Espacement et puces personnalisées */
 ul li {
-    padding: 8px 0;
+    margin-bottom: 10px;
+    padding-left: 18px; /* Espace pour la puce */
     position: relative;
-    padding-left: 15px;
-    margin-bottom: 8px;
-    color: #444;
+    color: var(--couleur-texte);
 }
 
+/* Création d'une puce carrée stylée */
 ul li::before {
-    content: "•";
+    content: "■";
+    color: var(--couleur-primaire);
+    font-size: 0.8em;
     position: absolute;
     left: 0;
-    color: #3498db;
+    top: 0;
+}
+
+/* Mettre en valeur la période/titre */
+strong {
+    /* La variable --couleur-secondaire est maintenant définie */
+    color: var(--couleur-secondaire); 
     font-weight: bold;
 }
 
 
-#competences ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-#competences li {
-    background-color: #3498db;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 14px;
-}
-
-
-#associations ul li {
-    padding-left: 15px;
-    position: relative;
-}
-
-#associations ul li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #2ecc71;
-    font-weight: bold;
-}
-
-
-@media (max-width: 600px) {
-    .cv-container {
-        padding: 20px;
-    }
-
-    #titre h1 {
-        font-size: 26px;
-    }
-
-    #titre h2 {
-        font-size: 16px;
-    }
+#description p {
+    font-style: italic;
+    text-align: justify;
+    padding: 0 10px;
 }
